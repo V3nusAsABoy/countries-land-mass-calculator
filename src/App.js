@@ -1,20 +1,18 @@
-import {useState} from "react";
+import {useState} from 'react';
+import Countries from './Countries';
 
-function App() {
-  const [countries, setCountries] = useState([]);
+const App = () => {
+    const [countries, setCountries] = useState([]);
 
-  const addCountry = () => {
-    setCountries((c) => [...c,""]);
-  }
+    const addCountries = () => {
+        setCountries((t) => [...t, "New Country"]);
+      };
 
-  return (
-    <>
-      {countries.map((country) => {
-        return <p>C</p>
-      })}
-      <button onClick = {addCountry}>Add</button>
-    </>
-  );
+    return(
+        <>
+            <Countries countries={countries} addCountry={addCountries}/>
+        </>
+    )
 }
 
 export default App;
