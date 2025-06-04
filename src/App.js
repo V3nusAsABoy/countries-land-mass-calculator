@@ -10,7 +10,7 @@ const App = () => {
 
     return(
         <>
-            <Countries countries={countries} addCountry={addCountries}/>
+            <Countries countries={countries} addCountry={addCountries} setCountries={setCountries}/>
         </>
     )
 }
