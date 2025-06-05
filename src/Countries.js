@@ -40,6 +40,14 @@ const Countries = ({countries, addCountry, setCountries}) => {
     setCountries(countriesToAdd);
   }
 
+  const removeOne = () => {
+    let newArray = [];
+    for(let i = 0; i < countries.length - 1; i++){
+      newArray.push("new country");
+    }
+    setCountries(newArray);
+  }
+
 
   return (
     <>
@@ -69,6 +77,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
           
         })}
         <button onClick = {addCountry}>Add Country</button>
+        <button onClick = {removeOne}>Remove country</button>
         <button onClick = {calculateSum}>Calculate Sum</button>
         <p>{sum}</p>
       </div>
