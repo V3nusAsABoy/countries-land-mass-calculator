@@ -28,7 +28,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
     for(let i = 0; i < selectedCountries.length; i++){
       s+=selectedCountries[i];
     }
-    setSum(s);
+    setSum(`The sum is: ${s} Km²`);
   }
 
   const addMore = () => {
@@ -43,33 +43,35 @@ const Countries = ({countries, addCountry, setCountries}) => {
 
   return (
     <>
-      <div id = "howMany">
-          <label for="many">How many countries?</label>
-          <select onChange = {handleMoreCountries}>
-          {Array.from({length: 100}, (_, i) => i + 1).map((n) => {
-            return <option value={n}>{n}</option>
-          })
-          }
-          </select>
-          <button onClick = {addMore}>add</button>
-      </div>
-      {countries.map((country) => {
-        return (<>
-        <div id = "countries">
-          <label for="countries">Country: </label>
-          <select name="countries" onChange = {handleSelectChange}>
-            <option>Select Country</option>
-            {data.map((c) => {
-              return <option value={c.area}>{c.country}</option>
-            })}
-          </select>
+      <div id = "main">
+        <div id = "howMany">
+            <label for="many">How many countries?</label>
+            <select onChange = {handleMoreCountries}>
+            {Array.from({length: 100}, (_, i) => i + 1).map((n) => {
+              return <option value={n}>{n}</option>
+            })
+            }
+            </select>
+            <button onClick = {addMore}>Confirm</button>
         </div>
-        </>)
-        
-      })}
-      <button onClick = {addCountry}>Add Country</button>
-      <button onClick = {calculateSum}>Calculate Sum</button>
-      <p>{sum}</p>
+        {countries.map((country) => {
+          return (<>
+          <div id = "countries">
+            <label for="countries">Country: </label>
+            <select name="countries" onChange = {handleSelectChange}>
+              <option>Select Country</option>
+              {data.map((c) => {
+                return <option value={c.area}>{c.country}</option>
+              })}
+            </select>
+          </div>
+          </>)
+          
+        })}
+        <button onClick = {addCountry}>Add Country</button>
+        <button onClick = {calculateSum}>Calculate Sum</button>
+        <p>{sum}</p>
+      </div>
     </>
   );
 }
