@@ -16,3 +16,12 @@ div{
 label, button{
     margin:0.5em;
 }
+
+h1{
+    text-align: center;
+    margin-bottom:2em;
+    font-size:3em;
+    color:rgb(0, 153, 255);
+    text-shadow: 0.03em 0.03em black;
+}
+
