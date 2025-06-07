@@ -1,6 +1,7 @@
 import {memo} from 'react';
 import data from './country-by-surface-area.json';
 import {useState} from 'react';
+import './Countries.css';
 
 const Countries = ({countries, addCountry, setCountries}) => {
 
@@ -76,9 +77,11 @@ const Countries = ({countries, addCountry, setCountries}) => {
           </>)
           
         })}
-        <button onClick = {addCountry}>Add Country</button>
-        <button onClick = {removeOne}>Remove country</button>
-        <button onClick = {calculateSum}>Calculate Sum</button>
+        <div id = "buttons">
+          <button onClick = {addCountry}>Add Country</button>
+          <button onClick = {removeOne}>Remove country</button>
+          <button onClick = {calculateSum}>Calculate Sum</button>
+        </div>
         <p>{sum}</p>
       </div>
     </>
