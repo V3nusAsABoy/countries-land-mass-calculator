@@ -9,11 +9,13 @@ const Countries = ({countries, addCountry, setCountries}) => {
 
   const [selectedAmount, setSelectedAmount] = useState();
 
-  const handleSelectChange = (e) => {
+  const handleSelectChange = (e, index) => {
     const val = parseInt(e.target.value);
 
     setSelectedCountries((v) => {
-      return [...v, val]
+      const newCountries = [...v];
+      newCountries[index] = val;
+      return newCountries;
     })
   }
 
@@ -66,14 +68,14 @@ const Countries = ({countries, addCountry, setCountries}) => {
             </select>
             <button onClick = {addMore}>Confirm</button>
         </div>
-        {countries.map((country) => {
+        {countries.map((country, index) => {
           return (<>
-          <div id = "countries">
-            <label for="countries">Country: </label>
-            <select name="countries" onChange = {handleSelectChange}>
-              <option>Select Country</option>
+          <div id = "countries" key = {index}>
+            <label htmlFor={`countries-${index}`} for="countries">Country: </label>
+            <select id={`countries-${index}`} name="countries" onChange = {(e) => handleSelectChange(e, index)}>
+              <option value = "">Select Country</option>
               {data.map((c) => {
-                return <option value={c.area}>{c.country}</option>
+                return <option key={c.country} value={c.area}>{c.country}</option>
               })}
             </select>
           </div>
