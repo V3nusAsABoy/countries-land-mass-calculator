@@ -1,3 +1,5 @@
 body{
-    background-color: rgb(253, 236, 221);
+    background-image: url('./theearth.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

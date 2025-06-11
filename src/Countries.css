@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 #main{
     display:flex;
     flex-direction:column;
@@ -5,9 +7,9 @@
     width:fit-content;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0.1em 0.1em 2em 1em rgb(165, 165, 165);
     border-radius: 2em;
     background-color: white;
+    margin-top:7.5em;
 }
 
 div{
@@ -18,12 +20,23 @@ label, button{
     margin:0.5em;
 }
 
+#header{
+    height:5em;
+    margin-bottom:3em;
+    background-color: rgba(0, 125, 209, 0.217);
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid black;
+}
+
 h1{
     text-align: center;
-    margin-bottom:2em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 450;
     font-size:3em;
-    color:rgb(0, 153, 255);
-    text-shadow: 0.03em 0.03em black;
+    color:rgb(255, 255, 255);
 }
 
 button{
@@ -31,4 +44,17 @@ button{
     color:white;
     border:none;
     padding:0.5em;
+}
+
+label, button, p, select{
+    font-family: 'Rubik', sans-serif;
+}
+
+#body{
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    height:100%;
+    padding:0;
 }

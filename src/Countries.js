@@ -54,40 +54,44 @@ const Countries = ({countries, addCountry, setCountries}) => {
 
   return (
     <>
-    <h1>
-      Country Land Mass Addition Calculator
-    </h1>
-      <div id = "main">
-        <div id = "howMany">
-            <label for="many">How many countries?</label>
-            <select onChange = {handleMoreCountries}>
-            {Array.from({length: 100}, (_, i) => i + 1).map((n) => {
-              return <option value={n}>{n}</option>
-            })
-            }
-            </select>
-            <button onClick = {addMore}>Confirm</button>
+      <div id = "body">
+        <div id = "header">
+          <h1>
+            Country Land Mass Addition Calculator
+          </h1>
         </div>
-        {countries.map((country, index) => {
-          return (<>
-          <div id = "countries" key = {index}>
-            <label htmlFor={`countries-${index}`} for="countries">Country: </label>
-            <select id={`countries-${index}`} name="countries" onChange = {(e) => handleSelectChange(e, index)}>
-              <option value = "">Select Country</option>
-              {data.map((c) => {
-                return <option key={c.country} value={c.area}>{c.country}</option>
-              })}
-            </select>
+          <div id = "main">
+          <div id = "howMany">
+              <label for="many">How many countries?</label>
+              <select onChange = {handleMoreCountries}>
+              {Array.from({length: 100}, (_, i) => i + 1).map((n) => {
+                return <option value={n}>{n}</option>
+              })
+              }
+              </select>
+              <button onClick = {addMore}>Confirm</button>
           </div>
-          </>)
-          
-        })}
-        <div id = "buttons">
-          <button onClick = {addCountry}>Add Country</button>
-          <button onClick = {removeOne}>Remove country</button>
-          <button onClick = {calculateSum}>Calculate Sum</button>
+          {countries.map((country, index) => {
+            return (<>
+            <div id = "countries" key = {index}>
+              <label htmlFor={`countries-${index}`} for="countries">Country: </label>
+              <select id={`countries-${index}`} name="countries" onChange = {(e) => handleSelectChange(e, index)}>
+                <option value = "">Select Country</option>
+                {data.map((c) => {
+                  return <option key={c.country} value={c.area}>{c.country}</option>
+                })}
+              </select>
+            </div>
+            </>)
+            
+          })}
+          <div id = "buttons">
+            <button onClick = {addCountry}>Add Country</button>
+            <button onClick = {removeOne}>Remove country</button>
+            <button onClick = {calculateSum}>Calculate Sum</button>
+          </div>
+          <p>{sum}</p>
         </div>
-        <p>{sum}</p>
       </div>
     </>
   );
