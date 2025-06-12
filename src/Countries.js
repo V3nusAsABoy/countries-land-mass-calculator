@@ -92,6 +92,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
           </div>
           <p>{sum}</p>
         </div>
+        <br />
       </div>
     </>
   );
