@@ -2,4 +2,5 @@ body{
     background-image: url('./theearth.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
