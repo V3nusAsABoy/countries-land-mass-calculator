@@ -9,7 +9,9 @@
     margin-right: auto;
     border-radius: 2em;
     background-color: white;
-    margin-top:7.5em;
+    height:fit-content;
+    margin-top:auto;
+    margin-bottom:auto;
 }
 
 div{
@@ -55,6 +57,67 @@ label, button, p, select{
     width:100%;
     top:0;
     left:0;
+    bottom:0;
     height:100%;
     padding:0;
+    display:grid;
+}
+
+footer{
+    color: white;
+    background-color: rgba(0, 76, 127, 0.694);
+    width:100%;
+    margin-top:auto;
+    text-align: center;
+}
+
+a, a:hover{
+    color:white;
+}
+
+@media screen and (max-width: 850px) {
+    #body h1{
+        transform: scale(0.75);
+    }
+    #main{
+        transform:translateX(2em);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #main{
+        width: 100%;
+        border-radius: 0;
+        background-color: rgba(137, 137, 137, 0.887);
+        transform:translateX(0em);
+    }
+
+    label, p{
+        color:white;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #body h1{
+        transform: scale(0.6);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #countries, #buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #buttons button{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #howMany{
+        width: 100%;
+        text-align: center;
+    }
 }

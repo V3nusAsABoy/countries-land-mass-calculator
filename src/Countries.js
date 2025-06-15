@@ -93,6 +93,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
           <p>{sum}</p>
         </div>
         <br />
+        <footer>Countries Land Mass API from <a href="https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json">https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json.</a></footer>
       </div>
     </>
   );
