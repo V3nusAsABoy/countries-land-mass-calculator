@@ -61,16 +61,16 @@ const Countries = ({countries, addCountry, setCountries}) => {
           </h1>
         </div>
           <div id = "main">
-          <div id = "howMany">
-              <label for="many">How many countries?</label>
-              <select onChange = {handleMoreCountries}>
-              {Array.from({length: 100}, (_, i) => i + 1).map((n) => {
-                return <option value={n}>{n}</option>
-              })
-              }
-              </select>
-              <button onClick = {addMore}>Confirm</button>
-          </div>
+            <div id = "howMany">
+                <label for="many">How many countries?</label>
+                <select onChange = {handleMoreCountries}>
+                {Array.from({length: 100}, (_, i) => i + 1).map((n) => {
+                  return <option value={n}>{n}</option>
+                })
+                }
+                </select>
+                <button onClick = {addMore}>Confirm</button>
+            </div>
           {countries.map((country, index) => {
             return (<>
             <div id = "countries" key = {index}>
@@ -83,7 +83,6 @@ const Countries = ({countries, addCountry, setCountries}) => {
               </select>
             </div>
             </>)
-            
           })}
           <div id = "buttons">
             <button onClick = {addCountry}>Add Country</button>
@@ -91,9 +90,10 @@ const Countries = ({countries, addCountry, setCountries}) => {
             <button onClick = {calculateSum}>Calculate Sum</button>
           </div>
           <p>{sum}</p>
+          <p><a>Guide</a></p>
         </div>
         <br />
-        <footer>Countries Land Mass API from <a href="https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json">https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json.</a></footer>
+        <footer><p>Countries Land Mass API from <a href="https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json">https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json.</a></p></footer>
       </div>
     </>
   );
