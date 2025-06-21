@@ -132,3 +132,7 @@ footer a, footer a:hover{
 .guide{
     max-width: 50em;
 }
+
+img{
+    border: solid 0.1em black;
+}
