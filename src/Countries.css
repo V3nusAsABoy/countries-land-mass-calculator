@@ -48,7 +48,7 @@ button{
     padding:0.5em;
 }
 
-label, button, p, select{
+label, button, p, select, h2{
     font-family: 'Rubik', sans-serif;
 }
 
@@ -127,4 +127,8 @@ footer a, footer a:hover{
         width: 100%;
         text-align: center;
     }
+}
+
+.guide{
+    max-width: 50em;
 }

@@ -18,7 +18,9 @@ const Guide = () => {
                         to remove 1 country, even after specifying an amount of countries.
                     </p>
                     <h2>Calculate sum</h2>
-                    
+                    <p>
+                        Once you have selected all the countries, press the "calculate sum" button to calculate and display the sum of the land masses of the countries.
+                    </p>
                 </div>
             </div>
         </>
