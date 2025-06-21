@@ -1,18 +1,14 @@
-import {useState} from 'react';
-import Countries from './Countries';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Guide from './Guide.js';
+import Main from './Main.js';
 
-const App = () => {
-    const [countries, setCountries] = useState(["First Country", "Second Country"]);
-
-    const addCountries = () => {
-        setCountries((t) => [...t, "New Country"]);
-      };
-
-    return(
-        <>
-            <Countries countries={countries} addCountry={addCountries} setCountries={setCountries}/>
-        </>
-    )
+function App(){
+    return(<Router>
+        <Switch>
+            <Route exact path = '/' component ={Main}></Route>
+            <Route exact path = '/guide' component ={Guide}></Route>
+        </Switch>
+    </Router>)
 }
 
 export default App;
