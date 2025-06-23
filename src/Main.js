@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import Countries from './Countries';
-import { withRouter } from 'react-router-dom';
 
 const Main = () => {
     const [countries, setCountries] = useState(["First Country", "Second Country"]);
@@ -16,4 +15,4 @@ const Main = () => {
     )
 }
 
-export default withRouter(Main);
+export default Main;

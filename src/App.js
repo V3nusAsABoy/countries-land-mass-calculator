@@ -1,14 +1,16 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Routes} from 'react-router-dom';
 import Guide from './Guide.js';
 import Main from './Main.js';
 
 function App(){
-    return(<Router>
-        <Switch>
-            <Route exact path = '/' component ={Main}></Route>
-            <Route exact path = '/guide' component ={Guide}></Route>
-        </Switch>
-    </Router>)
+    return(<HashRouter>
+
+        <Routes>
+            <Route exact path = '/' element ={<Main />}></Route>
+            <Route exact path = '/guide' element ={<Guide />}></Route>
+        </Routes>
+
+    </HashRouter>)
 }
 
 export default App;

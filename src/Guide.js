@@ -1,7 +1,7 @@
 import './Countries.css';
 import select from './img/select.png';
 import addremovecalc from './img/addremovecalc.png';
-import { withRouter } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Guide = () => {
     return(
@@ -26,7 +26,7 @@ const Guide = () => {
                     <p>
                         Once you have selected all the countries, press the "calculate sum" button to calculate and display the sum of the land masses of the countries.
                     </p>
-                    <p><a href="/">Home</a></p>
+                    <p><a><Link to='/'>Home</Link></a></p>
                 </div>
                 <br />
             </div>
@@ -34,4 +34,4 @@ const Guide = () => {
     )
 }
 
-export default withRouter(Guide);
+export default Guide;

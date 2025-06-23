@@ -2,6 +2,7 @@ import {memo} from 'react';
 import data from './country-by-surface-area.json';
 import {useState} from 'react';
 import './Countries.css';
+import {Link} from 'react-router-dom';
 
 const Countries = ({countries, addCountry, setCountries}) => {
 
@@ -90,7 +91,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
             <button onClick = {calculateSum}>Calculate Sum</button>
           </div>
           <p>{sum}</p>
-          <p><a href="/guide">Guide</a></p>
+          <p><a><Link to='guide'>Guide</Link></a></p>
         </div>
         <br />
         <footer><p>Countries Land Mass API from <a href="https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json">https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json.</a></p></footer>
