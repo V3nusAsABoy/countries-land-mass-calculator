@@ -26,7 +26,7 @@ const Guide = () => {
                     <p>
                         Once you have selected all the countries, press the "calculate sum" button to calculate and display the sum of the land masses of the countries.
                     </p>
-                    <p><a><Link to='/'>Home</Link></a></p>
+                    <p><Link to='/'>Home</Link></p>
                 </div>
                 <br />
             </div>

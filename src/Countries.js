@@ -91,7 +91,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
             <button onClick = {calculateSum}>Calculate Sum</button>
           </div>
           <p>{sum}</p>
-          <p><a><Link to='guide'>Guide</Link></a></p>
+          <p><Link to='guide'>Guide</Link></p>
         </div>
         <br />
         <footer><p>Countries Land Mass API from <a href="https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json">https://github.com/samayo/country-json/blob/master/src/country-by-surface-area.json.</a></p></footer>
