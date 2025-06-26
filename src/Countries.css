@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
+
 #main{
     display:flex;
     flex-direction:column;
@@ -30,6 +35,7 @@ label, button{
     align-items: center;
     justify-content: center;
     border-bottom: solid black;
+    width: 100%;
 }
 
 h1{
@@ -59,20 +65,15 @@ label, button, p, select, h2{
     height:100%;
     width:100%;
     padding:0;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+    display:grid;
 }
 
 footer{
     color: white;
     background-color: rgba(0, 76, 127, 0.694);
     text-align: center;
-    /*
-    display:flex;
-    justify-content: center;
-    */
-    margin:0;
+    margin-top:auto;
+    width:100%;
 }
 
 footer p{
@@ -83,7 +84,7 @@ footer a, footer a:hover{
     color:white;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 930px) {
     #body h1{
         transform: scale(0.75);
     }
@@ -91,6 +92,7 @@ footer a, footer a:hover{
 
 @media screen and (max-width: 580px) {
     #main{
+        width:100%;
         border-radius: 0;
         background-color: rgba(137, 137, 137, 0.887);
         transform:translateX(0em);
@@ -109,9 +111,6 @@ footer a, footer a:hover{
     #body h1{
         transform: scale(0.6);
     }
-}
-
-@media screen and (max-width: 450px) {
     #countries, #buttons{
         display: flex;
         flex-direction: column;
@@ -123,10 +122,30 @@ footer a, footer a:hover{
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 485px) {
+    #body h1{
+        transform: scale(0.4);
+    }
+}
+
+@media screen and (max-width: 415px){
+    #countries select{
+        width:10em;
+    }
+}
+
+@media screen and (max-width: 400px) {
     #howMany{
-        width: 100%;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width:fit-content;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 380px){
+    #body h1{
+        transform: scale(0.3);
     }
 }
 
