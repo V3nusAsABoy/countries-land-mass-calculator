@@ -56,7 +56,7 @@ const Countries = ({countries, addCountry, setCountries}) => {
   return (
     <>
       <div id = "body">
-        <div id = "header">
+        <div id = "header" class = "mainHeader">
           <h1>
             Country Land Mass Addition Calculator
           </h1>

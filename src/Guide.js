@@ -10,7 +10,7 @@ const Guide = () => {
                 <div id = "header">
                     <h1>Guide</h1>
                 </div>
-                <div id = "main" class="guide">
+                <div id = "guide">
                     <h2>Selecting amount of countries</h2>
                     <p>Use the drop down button menu to select the amount of countries you want to calculate the sum of the land masses of then press the "confirm" button
                         To generate that amount of countries.
