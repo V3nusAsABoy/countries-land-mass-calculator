@@ -26,7 +26,6 @@ label, button{
     height:5em;
     margin-bottom:3em;
     background-color: rgba(0, 125, 209, 0.217);
-    width:100%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -54,24 +53,26 @@ label, button, p, select, h2{
 
 #body{
     position: absolute;
-    width:100%;
     top:0;
     left:0;
     bottom:0;
     height:100%;
+    width:100%;
     padding:0;
-    display:grid;
-    overflow-x:hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer{
     color: white;
     background-color: rgba(0, 76, 127, 0.694);
-    width:100%;
-    margin-top:auto;
     text-align: center;
+    /*
     display:flex;
     justify-content: center;
+    */
+    margin:0;
 }
 
 footer p{
@@ -86,17 +87,17 @@ footer a, footer a:hover{
     #body h1{
         transform: scale(0.75);
     }
-    #main{
-        transform:translateX(2em);
-    }
 }
 
 @media screen and (max-width: 580px) {
     #main{
-        width: 100%;
         border-radius: 0;
         background-color: rgba(137, 137, 137, 0.887);
         transform:translateX(0em);
+    }
+
+    footer{
+        margin-top:auto;
     }
 
     label, p{
